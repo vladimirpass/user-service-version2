@@ -1,4 +1,4 @@
-package com.example.bankcard.dto;
+package com.example.userServiceNew.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

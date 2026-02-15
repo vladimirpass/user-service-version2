@@ -1,4 +1,4 @@
-package com.example.bankcard.exception;
+package com.example.userServiceNew.exception;
 
 public class DeleteException extends Exception{
     public DeleteException(String message){

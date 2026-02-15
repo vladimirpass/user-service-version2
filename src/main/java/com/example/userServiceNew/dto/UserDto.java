@@ -1,9 +1,9 @@
-package com.example.bankcard.dto;
+package com.example.userServiceNew.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -11,5 +11,8 @@ import java.util.List;
 public class UserDto {
     private Integer id;
     private String nameUser;
-    private List<CardDto> cards = List.of();
+    private String email;
+    private Integer age;
+    private LocalDateTime createAt = LocalDateTime.now();
+
 }

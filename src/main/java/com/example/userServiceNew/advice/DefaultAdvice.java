@@ -1,8 +1,8 @@
-package com.example.bankcard.advice;
+package com.example.userServiceNew.advice;
 
-import com.example.bankcard.dto.Response;
-import com.example.bankcard.exception.DeleteException;
-import com.example.bankcard.exception.NoContentException;
+import com.example.userServiceNew.dto.Response;
+import com.example.userServiceNew.exception.DeleteException;
+import com.example.userServiceNew.exception.NoContentException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;

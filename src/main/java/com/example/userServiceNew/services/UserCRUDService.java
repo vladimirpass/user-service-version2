@@ -1,8 +1,8 @@
-package com.example.bankcard.services;
+package com.example.userServiceNew.services;
 
-import com.example.bankcard.dto.UserDto;
-import com.example.bankcard.entity.User;
-import com.example.bankcard.repositories.UserRepository;
+import com.example.userServiceNew.dto.UserDto;
+import com.example.userServiceNew.entity.User;
+import com.example.userServiceNew.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -46,7 +46,7 @@ public class UserCRUDService implements CRUDServiceUser<UserDto>{
 
     @Override
     public void delete(Integer id) {
-        log.info("Delete users " + id);
+        log.info("Delete user " + id);
         userRepository.deleteById(id);
     }
 
@@ -55,11 +55,9 @@ public class UserCRUDService implements CRUDServiceUser<UserDto>{
         User user = new User();
         user.setId(userDto.getId());
         user.setNameUser(userDto.getNameUser());
-        user.setCards(
-                userDto.getCards()
-                        .stream()
-                        .map(CardCRUDService::mapToEntity)
-                        .toList());
+        user.setEmail(userDto.getEmail());
+        user.setAge(userDto.getAge());
+        user.setCreateAt(userDto.getCreateAt());
         return user;
     }
 
@@ -67,11 +65,9 @@ public class UserCRUDService implements CRUDServiceUser<UserDto>{
         UserDto userDto = new UserDto();
         userDto.setId(user.getId());
         userDto.setNameUser(user.getNameUser());
-        userDto.setCards(
-                user.getCards()
-                        .stream()
-                        .map(CardCRUDService::mapToDto)
-                        .toList());
+        userDto.setEmail(user.getEmail());
+        userDto.setAge(user.getAge());
+        userDto.setCreateAt(user.getCreateAt());
         return userDto;
     }
 }

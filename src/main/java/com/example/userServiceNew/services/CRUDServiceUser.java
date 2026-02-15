@@ -1,6 +1,6 @@
-package com.example.bankcard.services;
+package com.example.userServiceNew.services;
 
-import com.example.bankcard.dto.UserDto;
+import com.example.userServiceNew.dto.UserDto;
 
 import java.util.Collection;
 

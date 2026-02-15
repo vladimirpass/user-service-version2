@@ -1,4 +1,4 @@
-package com.example.bankcard;
+package com.example.userServiceNew;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

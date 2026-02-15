@@ -1,15 +1,16 @@
-package com.example.bankcard.entity;
+package com.example.userServiceNew.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "USERS")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -20,7 +21,15 @@ public class User {
     @Column(name = "name_user")
     private String nameUser;
 
-    @OneToMany(mappedBy = "users", cascade = CascadeType.ALL)
-    private List<Card> cards;
+    @Column(name = "email")
+    private String email;
+
+    @Column(name = "age")
+    private Integer age;
+
+    @Column(name = "create_at")
+    private LocalDateTime createAt;
+
+
 
 }
