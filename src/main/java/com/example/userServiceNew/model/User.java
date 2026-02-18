@@ -1,11 +1,10 @@
-package com.example.userServiceNew.entity;
+package com.example.userServiceNew.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 @Getter

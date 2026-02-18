@@ -1,18 +1,16 @@
 package com.example.userServiceNew.dto;
 
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.util.List;
 
-@AllArgsConstructor
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
-public class Response {
+@AllArgsConstructor
+public class UserResponseDto {
     private Integer status;
-    private String message;
+    private UserDto userDto;
     private List<String> error;
 }
